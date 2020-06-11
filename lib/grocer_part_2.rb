@@ -63,10 +63,9 @@ def checkout(cart, coupons)
   # some irritated customers
   
   # First consolidate the cart
-  
   consolidated_cart = consolidate_cart(cart)
-  # Then apply the coupons
   
+  # Then apply the coupons
   applied_coupon_cart = apply_coupons(consolidated_cart, coupons)
 
   # Then send it to apply_clearance
@@ -78,7 +77,7 @@ def checkout(cart, coupons)
   
   # If price is over 100 dollars, apply a 10% discount
   if total_price > 100.00
-    total_price = total_price - (total_price * 0.10) 
+    total_price = (total_price - (total_price * 0.10))
   end
 
   total_price
