@@ -74,6 +74,8 @@ def checkout(cart, coupons)
 
   # Add up prices in cart
   total_price = cart.inject { |sum, item| sum + item[:price] }
+  
+  binding.pry
 
   # If price is over 100 dollars, apply a 10% discount
   if total_price > 100.00
