@@ -69,18 +69,18 @@ def checkout(cart, coupons)
   # Then apply the coupons
   
   cart = apply_coupons(cart, coupons)
-  
+  binding.pry
   # Then send it to apply_clearance
   cart = apply_clearance(cart)
-  
+  binding.pry
   # Add up prices in cart
   total_price = cart.inject { |sum, item| sum + item[:price] }
-  
+  binding.pry
   # If price is over 100 dollars, apply a 10% discount
   if total_price > 100.00
     total_price = total_price - (total_price * 0.10) 
   end
-  
+  binding.pry
   total_price
 
 end
