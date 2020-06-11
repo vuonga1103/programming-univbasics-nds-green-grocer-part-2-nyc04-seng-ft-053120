@@ -77,9 +77,9 @@ def checkout(cart, coupons)
   
   # If price is over 100 dollars, apply a 10% discount
   if total_price > 100.00
-    total_price = (total_price - (total_price * 0.10)).round(2)
+    total_price = total_price - (total_price * 0.10)
   end
 
-  total_price
+  total_price.round(2)
 
 end
