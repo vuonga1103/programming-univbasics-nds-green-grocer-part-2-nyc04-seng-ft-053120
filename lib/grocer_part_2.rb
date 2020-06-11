@@ -77,7 +77,5 @@ def checkout(cart, coupons)
   total_price = cart.inject do |sum, item_price|
     sum + 
   
-  [3, 6, 10].inject {|sum, number| sum + number} =>|3, 6| 3 + 6 => 9
-                                               =>|9, 10| 9 + 10 =>19
   
 end
