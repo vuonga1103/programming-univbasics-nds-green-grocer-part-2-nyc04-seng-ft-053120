@@ -74,7 +74,7 @@ def checkout(cart, coupons)
 
   # Add up prices in cart
   total_price = 0
-  cart.each { |item| total_price.to_f += item[:price] }
+  cart.each { |item| total_price += item[:price] }
   
   # If price is over 100 dollars, apply a 10% discount
   if total_price > 100.00
