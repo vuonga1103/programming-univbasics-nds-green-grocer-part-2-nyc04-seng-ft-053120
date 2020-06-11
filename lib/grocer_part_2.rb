@@ -73,7 +73,7 @@ def checkout(cart, coupons)
 
   # Add up prices in cart
   total_price = 0
-  applied_clearance_cart.each { |item| total_price += item[:price] }
+  applied_clearance_cart.each { |item| total_price += item[:price] * item[:count] }
   
   # If price is over 100 dollars, apply a 10% discount
   if total_price > 100.00
