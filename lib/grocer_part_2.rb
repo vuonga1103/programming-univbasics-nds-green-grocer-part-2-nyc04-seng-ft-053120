@@ -64,17 +64,17 @@ def checkout(cart, coupons)
   
   # First consolidate the cart
   
-  cart = consolidate_cart(cart)
+  consolidated_cart = consolidate_cart(cart)
   # Then apply the coupons
   
-  cart = apply_coupons(cart, coupons)
+  applied_coupon_cart = apply_coupons(consolidated_cart, coupons)
 
   # Then send it to apply_clearance
-  cart = apply_clearance(cart)
+  applied_clearance_cart = apply_clearance(applied_coupon_cart)
 
   # Add up prices in cart
   total_price = 0
-  cart.each { |item| total_price += item[:price] }
+  applied_clearance_cart.each { |item| total_price += item[:price] }
   
   # If price is over 100 dollars, apply a 10% discount
   if total_price > 100.00
