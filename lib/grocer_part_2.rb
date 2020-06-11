@@ -73,7 +73,8 @@ def checkout(cart, coupons)
   cart = apply_clearance(cart)
 
   # Add up prices in cart
-  total_price = cart.inject { |sum, item| sum + item[:price] }
+  total_price = 0
+  cart.each { |item| total_price += item[:price] }
   
   binding.pry
 
