@@ -63,5 +63,5 @@ def checkout(cart, coupons)
   # some irritated customers
   
   # First create a new consolidated cart with consolidate_cart method; then pass it into apply_coupons; then send it to apply_clearance
-  apply_clearance(apply_coupons(consolidate_cart(cart), coupons))
+  
 end
