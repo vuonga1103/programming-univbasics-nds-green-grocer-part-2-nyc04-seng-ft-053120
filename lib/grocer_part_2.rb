@@ -66,6 +66,8 @@ def checkout(cart, coupons)
   
   cart = consolidate_cart(cart)
   
+  # Then apply the coupons
+  
   # then pass it into apply_coupons; then send it to apply_clearance
   
 end
