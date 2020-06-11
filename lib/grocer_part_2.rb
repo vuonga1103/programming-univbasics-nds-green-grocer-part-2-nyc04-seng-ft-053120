@@ -68,6 +68,11 @@ def checkout(cart, coupons)
   
   # Then apply the coupons
   
-  # then pass it into apply_coupons; then send it to apply_clearance
+  cart = apply_coupons(cart)
+  
+  # Then send it to apply_clearance
+  cart = apply_clearance(cart)
+  
+  # Loop through and add up prices in cart
   
 end
