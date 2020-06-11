@@ -76,8 +76,6 @@ def checkout(cart, coupons)
   total_price = 0
   cart.each { |item| total_price += item[:price] }
   
-  binding.pry
-
   # If price is over 100 dollars, apply a 10% discount
   if total_price > 100.00
     total_price = total_price - (total_price * 0.10) 
