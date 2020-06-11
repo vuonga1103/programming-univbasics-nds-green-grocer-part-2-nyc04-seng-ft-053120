@@ -39,6 +39,16 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  
+  # Loop through each item in cart, if the item is on clearance, set the price of the item to a discount price of 20% less
+  cart.each do |item|
+    if item[:clearance] 
+      item[:price] = (item[:price] - (item[:price] * 0.20)).round(2)
+    end
+  end
+  
+  # Return cart
+  cart
 end
 
 def checkout(cart, coupons)
