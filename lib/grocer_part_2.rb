@@ -74,5 +74,6 @@ def checkout(cart, coupons)
   cart = apply_clearance(cart)
   
   # Loop through and add up prices in cart
+  total_price = cart.
   
 end
