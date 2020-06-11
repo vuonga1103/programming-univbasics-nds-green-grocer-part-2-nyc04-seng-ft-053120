@@ -68,7 +68,7 @@ def checkout(cart, coupons)
   
   # Then apply the coupons
   
-  cart = apply_coupons(cart)
+  cart = apply_coupons(cart, coupons)
   
   # Then send it to apply_clearance
   cart = apply_clearance(cart)
